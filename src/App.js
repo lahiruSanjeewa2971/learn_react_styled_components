@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components'
+import Navbar from './components/navbar/Navbar';
+import { theme } from './styles/theme';
+import { GlobalStyles } from './styles/GlobalStyles';
+import { Container } from './components/Container';
+import Hero from './components/hero/Hero';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Container backgroundColor="white" height="100vh" >
+          <Navbar/>
+          <Hero/>
+        </Container>
+      </ThemeProvider>
+    </>
   );
 }
 
