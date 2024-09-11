@@ -11,11 +11,24 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Left = styled.div``;
+const Left = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+`;
 
-const Center = styled.div``;
+const Center = styled.div`
+  display: flex;
+  flex: 2;
+`;
 
-const Right = styled.div``;
+const Right = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+`;
 
 const Logo = styled.h1`
   font-size: 20px;
@@ -45,9 +58,9 @@ const Button = styled.button`
   border: 2px solid white;
   cursor: pointer;
   color: white;
-  padding: 10px 10px;
+  padding: 10px 20px;
   border-radius: 10px;
-  &:hover{
+  &:hover {
     background-color: aliceblue;
     color: darkblue;
     border: 1px solid darkblue;
@@ -57,7 +70,7 @@ const Button = styled.button`
 const Navbar = () => {
   return (
     <Container>
-    {/* <Container backgroundColor="white" height="10%"> */}
+      {/* <Container backgroundColor="white" height="10%"> */}
       <Left>
         <Logo>IT Support</Logo>
       </Left>
